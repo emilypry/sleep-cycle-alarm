@@ -1,5 +1,7 @@
 const long MIN = 60000; // 1 minute = 60,000ms
 const long MINS_IN_DAY = 1440; // 60mins * 24hrs = 1440mins/day
+const int QS_IN_MIN = 4 * 60; // 4 quarter seconds * 60 seconds = 1 minute
+
 
 // PLEASE ENTER the number of minutes it should take you to fall asleep
 // once you've set the timer
