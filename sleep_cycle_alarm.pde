@@ -201,23 +201,19 @@ void soundAlarm(){
       while(true){
         delay(250);
 
-        // If stopAlarm has been pressed, stop the snooze
-        if(buttonPressed(stopAlarm) == true){
-          quit = true;
-          break;
-        }
-
         // If the user has snoozed for enough time, stop
-        if(onFor() - snoozeStartMin == SNOOZE_MINS){
-          quit = true;
-          break;
-        }
-
-        if(aQuarter < 4){
-          aQuarter += 1;
-        }else{
+        if(aQuarter == QS_IN_MIN){
+          Serial.println("a quarter = a minute");
           aQuarter = 0;
+          if(onFor() - snoozeStartMin == SNOOZE_MINS){
+            Serial.println("hit snooze mins");
+            //quit = true;
+            break;
+          }
+        }else{
+          aQuarter += 1;
         }
+        
       }
     }
 
