@@ -184,6 +184,7 @@ void soundAlarm(){
 
     // If the stopAlarm button has been pressed
     if(buttonPressed(stopAlarm) == true){
+      quit = true;
       // Stop
       break;
     }
