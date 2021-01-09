@@ -18,7 +18,7 @@ const long LONG_TIMER_MINS = (9 * 60) + MINS_TO_FALL_ASLEEP;
 #define shortTimer 16 // The LED that indicates the choice of the short timer
 #define medTimer 3 // The LED that indicates the choice of the medium timer
 #define longTimer 4 // The LED that indicates the choice of the long timer  
-#define pickTimer 5 // The button for toggling between the shorter and longer timer                      
+#define pickTimer 5 // The button for toggling between the three timers                    
 #define startTimer 6 // The button for starting the alarm
 #define buzzer 9 // The buzzer for the sounding of the alarm
 #define stopAlarm 7 // The button for stopping the sounding of the alarm
