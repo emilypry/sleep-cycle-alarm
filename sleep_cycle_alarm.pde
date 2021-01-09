@@ -126,7 +126,7 @@ void sleepWithTimer(int timerChoice){
     long startSleepingMin = onFor(); // The minute at which the sleeping period begins
     boolean sleptEnough = false;
     int thisQuarter = 0; // Tracks quarter seconds
-    int qsInMin = 4 * 6; // The number of quarter seconds in a minute
+    int qsInMin = 4 * 60; // The number of quarter seconds in a minute
     long thisSleepingMin; // How long the sleeping period has gone on for
 
     while(true){
