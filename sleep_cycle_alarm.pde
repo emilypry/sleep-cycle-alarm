@@ -204,6 +204,9 @@ void soundAlarm(){
 
         // If stopAlarm has been pressed, stop the snooze
         if(buttonPressed(stopAlarm) == true){
+          // Turn off the snoozing LED
+          digitalWrite(snoozing, LOW);
+
           quit = true;
           break;
         }
@@ -212,6 +215,9 @@ void soundAlarm(){
         if(aQuarter == QS_IN_MIN){
           aQuarter = 0;
           if(onFor() - snoozeStartMin == SNOOZE_MINS){
+            // Turn off the snoozing LED
+            digitalWrite(snoozing, LOW);
+
             break;
           }
         }else{
@@ -222,9 +228,6 @@ void soundAlarm(){
     }
 
     if(quit == true){
-      // Turn off the snoozing LED
-      digitalWrite(snoozing, LOW);
-
       // Stop
       break;
     }
