@@ -1,5 +1,5 @@
 # sleep-cycle-alarm
-An sleep cycle alarm for Arduino
+A sleep cycle alarm for Arduino
 
 This is the program for an Arduino device that may be used instead of a typical alarm clock. 
 It has three fixed-time timers, one for 6 hours, one for 7.5 hours, and the other for 9, each 
@@ -21,16 +21,22 @@ the same time each day, which is why it's best to turn the device on at the earl
 to begin with. 
 
 Once the timer has begun (since the user expects to fall asleep shortly), all of the LEDs will be
-turned off so the user may sleep. The user has the option to press the button for starting the timer
-once again, if they want to reset the timer (if, e.g., something came up and they couldn't fall asleep
-as quickly as expected). An LED will turn on for a few seconds to verify that the timer has been reset.
+turned off so the user may sleep. In Version 1, the user has the option of resetting the timer by
+pressing the button for starting the timer (if, e.g., something came up and they couldn't fall 
+asleep as quickly as expected). An LED will turn on for a few seconds to confirm that the timer has 
+been reset. In Version 2, if the user presses the button for starting the timer, they will return to 
+the point at which they can pick between the 6-, 7.5-, and 9-hour timers, instead of merely resetting 
+the timer that they'd already chosen (if, e.g., the user could afford to sleep for 9 hours when first 
+setting the timer, then was kept up for an hour, and now can afford to sleep for only 7.5 hours). 
 
-After the sleep time has elapsed, a buzzer will beep pleasantly to wake the user up. The user may press one
-button to turn off the alarm, or press another to snooze. Snoozing will last for the number of minutes
-that SNOOZE_MINS is set to in the program. An LED will be on during the snoozing period, to verify 
+After the sleep time has elapsed, a buzzer will beep pleasantly to wake the user up. (Only in Version 2, 
+the user may press the button for stopping the alarm before the sleep time has elapsed. This will prevent 
+the alarm from going off. Also only in Version 2, an LED will flash as the buzzer beeps.) The user may press
+one button to turn off the alarm, or press another to snooze. Snoozing will last for the number of minutes
+that SNOOZE_MINS is set to in the program. An LED will be on during the snoozing period, to confirm 
 that snoozing is happening and to gently encourage the user to wake up. The user may end the snooze early
 by pressing the button that stops the alarm. Otherwise, the alarm will go off again once the snooze time has 
 elapsed. The user may snooze as many times as they like. 
 
-Once the alarm has been turned off, the device will remain idle until the time at which the device
+Once the alarm has been turned off, the device will remain idle until the time of the day at which the device
 had initially been turned on, at which point it will begin the flashing of the LED again. 
